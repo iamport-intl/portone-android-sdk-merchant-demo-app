@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Dukan</string>
+    <string name="web_checkout">Web Checkout</string>
+    <string name="tokenization">Tokenization</string>
+    <string name="non_tokenization">Non Tokenization</string>
+    <string name="payout_status">Payout Status: </string>
+    <string name="card_number">Card Number</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="nguyen_van_a">NYUGEN VAN A</string>
+    <string name="mm_yyyy">MM/YYYY</string>
+    <string name="cvv">cvv</string>
+    <string name="remember_my_card_for_next_purchases">Remember my card for Next Purchases</string>
+    <string name="checkout">Checkout</string>
+    <string name="cancell">Cancell</string>
+    <string name="momopay">MOMOPay</string>
+    <string name="zalopay">ZaloPay</string>
+    <string name="vnpay">VNPAY</string>
+    <string name="ninepay">9Pay</string>
+    <string name="onepay">OnePay</string>
+    <string name="adyen">Adyen</string>
+    <string name="shopeePay">ShopeePay</string>
+    <string name="epay">EPay</string>
+    <string name="omise">Omise</string>
+    <string name="asiapay">Asia Pay</string>
+</resources>

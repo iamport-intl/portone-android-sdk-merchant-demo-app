@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttonWebCheckout" type="id" />
+    <item name="buttonTokenization" type="id" />
+    <item name="buttonNonTokenization" type="id" />
+    <item name="tvPaymentStatus" type="id" />
+    <item name="tvTitle" type="id" />
+    <item name="buttonsLayout" type="id" />
+    <item name="buttonSettings" type="id" />
+    <item name="payoutStatusCard" type="id" />
+    <item name="dividerLine1" type="id" />
+    <item name="tokenizationCard" type="id" />
+    <item name="cardLayout" type="id" />
+    <item name="etCardNumber" type="id" />
+    <item name="etName" type="id" />
+    <item name="etMonthYear" type="id" />
+    <item name="etCVV" type="id" />
+    <item name="cbSaveCard" type="id" />
+    <item name="buttonTokenizationCheckout" type="id" />
+    <item name="dividerLine2" type="id" />
+    <item name="bodyCard" type="id" />
+    <item name="buttonCancelTokenization" type="id" />
+    <item name="radioGroup1" type="id" />
+    <item name="btnMomopay" type="id" />
+    <item name="btnZalopay" type="id" />
+    <item name="btnVnpay" type="id" />
+    <item name="btn9pay" type="id" />
+    <item name="btnOnepay" type="id" />
+    <item name="btnAdyen" type="id" />
+    <item name="radioGroup2" type="id" />
+    <item name="btnShoppeePay" type="id" />
+    <item name="btnEpay" type="id" />
+    <item name="btnOMISE" type="id" />
+    <item name="btnAsiaPay" type="id" />
+</resources>
