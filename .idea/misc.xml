@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../.gradle/caches/transforms-3/4223b03b3c3098ddf14342ef2e346185/transformed/chaipay-android-native-sdk-V3.0.6/res/layout/activity_web.xml" value="0.3098958333333333" />
+        <entry key="../../../.gradle/caches/transforms-3/c7584dcc618016425129edb8c0df85bc/transformed/chaipay-android-native-sdk-V3.0.7/res/layout/activity_web.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/drawable/divider.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/divider_large.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/divider_small.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/ic_card_placeholder.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/ic_contact_placeholder.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/ic_settings_24.xml" value="0.1565" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29583333333333334" />
+        <entry key="app/src/main/res/layout/card_layout.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/non_tokenization_layout.xml" value="0.3098958333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

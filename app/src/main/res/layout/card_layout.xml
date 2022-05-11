@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/cardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_number"
+        android:textColor="@color/gray5"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@id/etCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/solid_square_with_border"
+        android:digits="1234567890 "
+        android:drawableEnd="@drawable/ic_card_placeholder"
+        android:drawableTint="@color/gray3"
+        android:ems="16"
+        android:hint="@string/card_number"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="19"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/card_holder_name"
+        android:textColor="@color/gray5"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/solid_square_with_border"
+        android:drawableEnd="@drawable/ic_contact_placeholder"
+        android:drawableTint="@color/gray3"
+        android:hint="@string/nguyen_van_a"
+        android:imeOptions="actionNext"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:divider="@drawable/divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mm_yyyy"
+                android:textColor="@color/gray5"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@id/etMonthYear"
+                tools:text="09/2026"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/solid_square_with_border"
+                android:digits="0123456789/"
+                android:ems="9"
+                android:hint="MM/YYYY"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="7"
+                android:padding="5dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cvv"
+                android:textColor="@color/gray5"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@id/etCVV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/solid_square_with_border"
+                android:ems="3"
+                android:hint="..."
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="5dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@id/cbSaveCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remember_my_card_for_next_purchases"
+        android:textSize="10sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@id/buttonCancelTokenization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/gray2"
+            android:text="@string/cancell"
+            android:textColor="@color/gray5"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <Button
+            android:id="@id/buttonTokenizationCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="@string/checkout"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
