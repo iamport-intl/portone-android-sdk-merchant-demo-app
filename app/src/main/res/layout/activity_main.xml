@@ -93,28 +93,6 @@
             android:orientation="vertical">
 
             <View
-                android:id="@id/dividerLine1"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/teal_700"
-                android:outlineProvider="bounds" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@id/bodyCard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:elevation="10dp"
-                app:cardCornerRadius="10dp">
-
-                <include layout="@layout/card_layout" />
-
-            </androidx.cardview.widget.CardView>
-
-            <View
                 android:id="@id/dividerLine2"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
