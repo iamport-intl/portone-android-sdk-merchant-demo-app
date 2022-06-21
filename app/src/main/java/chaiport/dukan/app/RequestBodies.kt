@@ -6,8 +6,8 @@ import com.android.chaipaylibrary.dto.PaymentDto
 
 object RequestBodies {
 
-    var paymentChannel = "OMISE"
-    var paymentMethod = "OMISE_CREDIT_CARD"
+    var paymentChannel = "VNPAY"
+    var paymentMethod = "VNPAY_ALL"
     var devEnvironment = PRODUCTION
     var clientKey = CLIENT_KEY
     var currency = VND

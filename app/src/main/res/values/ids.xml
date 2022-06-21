@@ -32,4 +32,5 @@
     <item name="btnEpay" type="id" />
     <item name="btnOMISE" type="id" />
     <item name="btnAsiaPay" type="id" />
+    <item name="tvPaymentStatusValue" type="id" />
 </resources>

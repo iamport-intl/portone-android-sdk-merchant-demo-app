@@ -132,7 +132,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@id/tvPaymentStatus"
+                        android:id="@id/tvPaymentStatusValue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/payout_status"

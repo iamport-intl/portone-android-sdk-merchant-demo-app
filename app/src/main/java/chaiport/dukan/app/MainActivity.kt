@@ -14,6 +14,7 @@ import com.android.chaipaylibrary.constants.PAYMENT_STATUS_REQUEST_CODE
 import com.android.chaipaylibrary.constants.PAYOUT_REQUEST_CODE
 import com.android.chaipaylibrary.constants.RESULT_CODE
 import com.android.chaipaylibrary.dto.PaymentDto
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         val paymentStatusObserver =
             Observer<PaymentDto.CheckoutUsingCreditCardResponse> { paymentStatus ->
-                tvPaymentStatus.text = paymentStatus.toString()
+                tvPaymentStatusValue.text = paymentStatus.toString()
             }
 
         chaiPort.showPaymentStatus().observe(this, paymentStatusObserver)
@@ -66,6 +67,9 @@ class MainActivity : AppCompatActivity() {
                     val paymentStatus: PaymentDto.PaymentStatus? =
                         (data.getSerializableExtra(PAYMENT_STATUS)
                             ?: "Empty") as PaymentDto.PaymentStatus
+                    val gson = Gson()
+                    val json = gson.toJson(paymentStatus)
+                    tvPaymentStatusValue.text = json
                 }
 
             }
