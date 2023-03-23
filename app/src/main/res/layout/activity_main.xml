@@ -8,18 +8,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@id/buttonSettings"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/ic_settings_24" />
-
     <TextView
         android:id="@id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSettings"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/teal_700"

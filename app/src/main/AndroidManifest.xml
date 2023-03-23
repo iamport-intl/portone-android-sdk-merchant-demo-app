@@ -27,7 +27,7 @@
 
                 <data
                     android:host="checkout"
-                    android:scheme="chaipay" />
+                    android:scheme="portone" />
             </intent-filter>
         </activity>
     </application>
