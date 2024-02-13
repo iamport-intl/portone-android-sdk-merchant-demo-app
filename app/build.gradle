@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         applicationId "chaiport.dukan.app"
-        minSdk 21
-        targetSdk 31
+        minSdk 33
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -46,7 +46,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //ChaiPort SDK
-    implementation 'com.github.iamport-intl:chaipay-android-native-sdk:V3.0.21'
+    implementation 'com.github.iamport-intl:chaipay-android-native-sdk:V3.0.34'
 
     //jwt token generation
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
@@ -55,5 +55,7 @@ dependencies {
     implementation group: 'com.google.guava', name: 'guava', version: '29.0-jre'
 
     implementation 'com.google.code.gson:gson:2.8.9'
+    implementation "net.java.dev.jna:jna:5.13.0@aar"
+
 
 }

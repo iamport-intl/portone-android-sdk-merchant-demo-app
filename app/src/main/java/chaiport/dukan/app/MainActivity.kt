@@ -3,6 +3,7 @@ package chaiport.dukan.app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import chaiport.dukan.app.RequestBodies.getTokenizationRequest
 import chaiport.dukan.app.RequestBodies.getWebCheckoutRequest
 import chaiport.dukan.app.RequestBodies.getWithoutTokenizationRequest
@@ -74,8 +75,12 @@ class MainActivity : AppCompatActivity() {
             })
 
         buttonWebCheckout.setOnClickListener {
+            val gson = Gson()
+            val json = gson.toJson(getWebCheckoutRequest())
+            Log.i("WebCheckoutRequest", json)
+            val token = Utility.getJwtToken()
             chaiPort.checkoutUsingWeb(
-                token = Utility.getJwtToken(),
+                token = token,
                 clientKey = RequestBodies.clientKey,
                 request = getWebCheckoutRequest()
             )
@@ -97,8 +102,8 @@ class MainActivity : AppCompatActivity() {
                     val paymentStatus: PaymentDto.PaymentStatus? =
                         (data.getSerializableExtra(PAYMENT_STATUS)
                             ?: "Empty") as PaymentDto.PaymentStatus
-                    val gson= Gson()
-                    val json=gson.toJson(paymentStatus)
+                    val gson = Gson()
+                    val json = gson.toJson(paymentStatus)
                     tvPaymentStatusValue.text = json
                 }
 

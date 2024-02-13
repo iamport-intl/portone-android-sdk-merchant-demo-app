@@ -40,7 +40,7 @@ object Utility {
             }
         }
 
-        val sha256 = Hashing.hmacSha256(SECRET_KEY.toByteArray(StandardCharsets.UTF_8))
+        val sha256 = Hashing.hmacSha256(RequestBodies.secretKey.toByteArray(StandardCharsets.UTF_8))
             .hashString(message, StandardCharsets.UTF_8).asBytes()
 
         val base64: String = Base64.encodeToString(sha256, Base64.DEFAULT)
@@ -65,17 +65,17 @@ object Utility {
             .setHeaderParam("typ", "JWT")
             .setHeaderParam("alg", "HS256")
             .claim("iss", "CHAIPAY")
-            .claim("sub", CLIENT_KEY)
+            .claim("sub", RequestBodies.clientKey)
             .claim("iat", generationTime)
             .claim("exp", expirationTime)
             .signWith(
                 SignatureAlgorithm.HS256,
-                SECRET_KEY.toByteArray(
+                RequestBodies.secretKey.toByteArray(
                     StandardCharsets.UTF_8
                 )
             )
             .compact()
 
-        return jwt
+        return "Bearer $jwt"
     }
 }
