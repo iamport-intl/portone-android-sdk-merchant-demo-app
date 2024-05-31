@@ -81,10 +81,10 @@ object RequestBodies {
             Utility.getSignatureHash(
                 "50010",
                 currency,
-                "https://dev-checkout.chaiport.io/failure.html",
+                "https://dev-checkout.portone.io/failure.html",
                 orderId,
                 clientKey,
-                "https://dev-checkout.chaiport.io/success.html"
+                "https://dev-checkout.portone.io/success.html"
             )
 
         val orderDetail: CheckoutPaymentDto.OrderDetail = CheckoutPaymentDto.OrderDetail(
@@ -99,11 +99,11 @@ object RequestBodies {
         orderList.add(orderDetail)
 
         val orderDetails = CheckoutPaymentDto.CheckoutUsingWebRequest()
-        orderDetails.chaipayKey = clientKey
+        orderDetails.portoneKey = clientKey
         orderDetails.merchantDetails = CheckoutPaymentDto.MerchantDetails(
             name = "Gumnam",
             logo = null,
-            backUrl = "https://demo.chaiport.io/checkout.html",
+            backUrl = "https://demo.portone.io/checkout.html",
             promoCode = "Gumnam420",
             promoDiscount = 10000,
             shippingCharges = 10000.00
@@ -139,8 +139,8 @@ object RequestBodies {
             )
         )
         orderDetails.orderDetails = orderList
-        orderDetails.successUrl = "https://dev-checkout.chaiport.io/success.html"
-        orderDetails.failureUrl = "https://dev-checkout.chaiport.io/failure.html"
+        orderDetails.successUrl = "https://dev-checkout.portone.io/success.html"
+        orderDetails.failureUrl = "https://dev-checkout.portone.io/failure.html"
         orderDetails.expiryHours = 1
         orderDetails.source = "mobile"
         orderDetails.description = "By Aagam"
@@ -163,21 +163,21 @@ object RequestBodies {
             Utility.getSignatureHash(
                 "50010",
                 currency,
-                "https://dev-checkout.chaipay.io/failure.html",
+                "https://dev-checkout.portone.io/failure.html",
                 orderId,
                 clientKey,
-                "https://dev-checkout.chaipay.io/success.html"
+                "https://dev-checkout.portone.io/success.html"
             )
 
         val paymentDetails = PaymentDto.CheckoutUsingTokenizationRequest(
-            key = clientKey,
-            pmtChannel = paymentChannel,
-            pmtMethod = paymentMethod,
+            portoneKey = clientKey,
+            paymentChannel = paymentChannel,
+            paymentMethod = paymentMethod,
             merchantOrderId = orderId,
             amount = 50010.00,
             currency = currency,
-            successUrl = "https://dev-checkout.chaipay.io/success.html",
-            failureUrl = "https://dev-checkout.chaipay.io/failure.html",
+            successUrl = "https://dev-checkout.portone.io/success.html",
+            failureUrl = "https://dev-checkout.portone.io/failure.html",
             signatureHash = signatureHash,
             billingDetails = PaymentDto.BillingInfo(billingPhone = phoneNo),
             redirectUrl = "portone://checkout",
@@ -196,21 +196,21 @@ object RequestBodies {
             Utility.getSignatureHash(
                 "50010",
                 currency,
-                "https://dev-checkout.chaipay.io/failure.html",
+                "https://dev-checkout.portone.io/failure.html",
                 orderId,
                 clientKey,
-                "https://dev-checkout.chaipay.io/success.html"
+                "https://dev-checkout.portone.io/success.html"
             )
 
         val paymentDetails = PaymentDto.CheckoutUsingTokenizationRequest(
-            key = clientKey,
-            pmtChannel = paymentChannel,
-            pmtMethod = paymentMethod,
+            portoneKey = clientKey,
+            paymentChannel = paymentChannel,
+            paymentMethod = paymentMethod,
             merchantOrderId = orderId,
             amount = 50010.00,
             currency = currency,
-            successUrl = "https://dev-checkout.chaipay.io/success.html",
-            failureUrl = "https://dev-checkout.chaipay.io/failure.html",
+            successUrl = "https://dev-checkout.portone.io/success.html",
+            failureUrl = "https://dev-checkout.portone.io/failure.html",
             signatureHash = signatureHash,
             billingDetails = PaymentDto.BillingInfo(billingPhone = phoneNo),
             cardDetails = null,
@@ -228,10 +228,10 @@ object RequestBodies {
             Utility.getSignatureHash(
                 "50010",
                 currency,
-                "https://dev-checkout.chaipay.io/failure.html",
+                "https://dev-checkout.portone.io/failure.html",
                 orderId,
                 clientKey,
-                "https://dev-checkout.chaipay.io/success.html"
+                "https://dev-checkout.portone.io/success.html"
             )
 
         val billingAddress: PaymentDto.Address = PaymentDto.Address()
@@ -276,8 +276,8 @@ object RequestBodies {
         orderDetails.billingDetails = billingDetails
         orderDetails.shippingDetails = shippingDetails
         orderDetails.orderDetails = orderList
-        orderDetails.successUrl = "https://dev-checkout.chaipay.io/success.html"
-        orderDetails.failureUrl = "https://dev-checkout.chaipay.io/failure.html"
+        orderDetails.successUrl = "https://dev-checkout.portone.io/success.html"
+        orderDetails.failureUrl = "https://dev-checkout.portone.io/failure.html"
         orderDetails.redirectUrl = "portone://checkout"
         orderDetails.environment = environment
         orderDetails.source = "mobile"
@@ -287,11 +287,11 @@ object RequestBodies {
 
     fun getBankListRequest(): PaymentDto.BankListRequest {
         val request = PaymentDto.BankListRequest()
-        request.amount = 20023
+        request.amount = 20023.00
         request.environment = environment
-        request.iamportKey = clientKey
+        request.portoneKey = clientKey
         request.isMerchantSponsored = false
-        request.methodKey = "GBPRIMEPAY_INSTALLMENT"
+        request.paymentMethod = "GBPRIMEPAY_INSTALLMENT"
         request.overrideDefault = false
         request.currency= THB
         return request

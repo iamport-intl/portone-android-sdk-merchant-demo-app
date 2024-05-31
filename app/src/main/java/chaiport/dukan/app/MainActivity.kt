@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val chaiPort: PortOne
+        val portone: PortOne
 
-        chaiPort = PortOneImpl(
+        portone = PortOneImpl(
             context = this,
             environment = RequestBodies.environment,
             devEnvironment = RequestBodies.devEnvironment
@@ -35,10 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         if (null != intent && null != intent.data) {
             val paymentStatus = intent.data.toString()
-            chaiPort.updatePaymentStatus(paymentStatus)
+            portone.updatePaymentStatus(paymentStatus)
         }
 
-        chaiPort.getBankList(
+        portone.getBankList(
             "GBPRIMEPAY",
             RequestBodies.getBankListRequest(),
             object : ApiCallbackInterface<PaymentDto.BankListResponse> {
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
             })
 
-        chaiPort.getDBTDetails(RequestBodies.clientKey,
+        portone.getDBTDetails(RequestBodies.clientKey,
             object : ApiCallbackInterface<PaymentDto.DBTResponse> {
                 override fun onSucceed(response: PaymentDto.DBTResponse) {
                     LoggerUtil.info("Successful")
@@ -79,17 +79,17 @@ class MainActivity : AppCompatActivity() {
             val json = gson.toJson(getWebCheckoutRequest())
             Log.i("WebCheckoutRequest", json)
             val token = Utility.getJwtToken()
-            chaiPort.checkoutUsingWeb(
+            portone.checkoutUsingWeb(
                 token = token,
-                clientKey = RequestBodies.clientKey,
+                portoneKey = RequestBodies.clientKey,
                 request = getWebCheckoutRequest()
             )
         }
         buttonNonTokenization.setOnClickListener {
-            chaiPort.checkoutWithoutTokenization(request = getWithoutTokenizationRequest())
+            portone.checkoutWithoutTokenization(request = getWithoutTokenizationRequest())
         }
         buttonTokenization.setOnClickListener {
-            chaiPort.checkoutWithTokenization(request = getTokenizationRequest())
+            portone.checkoutWithTokenization(request = getTokenizationRequest())
         }
     }
 

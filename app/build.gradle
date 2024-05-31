@@ -46,7 +46,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //ChaiPort SDK
-    implementation 'com.github.iamport-intl:chaipay-android-native-sdk:V3.0.35'
+    implementation 'com.github.iamport-intl:portone-android-native-sdk:V3.0.43'
 
     //jwt token generation
     implementation 'io.jsonwebtoken:jjwt:0.9.1'

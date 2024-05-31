@@ -64,7 +64,7 @@ object Utility {
         val jwt = Jwts.builder()
             .setHeaderParam("typ", "JWT")
             .setHeaderParam("alg", "HS256")
-            .claim("iss", "CHAIPAY")
+            .claim("iss", "PORTONE")
             .claim("sub", RequestBodies.clientKey)
             .claim("iat", generationTime)
             .claim("exp", expirationTime)
